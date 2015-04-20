@@ -75,7 +75,7 @@
 
             context.Response.OnSendingHeaders(_ => 
             {
-                
+                //This fires before UseCookieAuthentication can set the logged in Cookie so we cant read it and create a CSRF token
                 if ((string)env["owin.RequestPath"] == "/login" && (string)env["owin.RequestMethod"] == "POST")
                 {
                     var responseHeaders = (IDictionary<string, string[]>)env["owin.ResponseHeaders"];
@@ -86,7 +86,8 @@
                         if (authcookie != null)
                         {
                             var authcookieValue = authcookie.Split(new[] { '=' }, StringSplitOptions.RemoveEmptyEntries)[1].Split(new[] { ';' })[0];
-                            var csrfToken = authcookie.Reverse();
+                            //Make a secure token. This is not a good example
+                            var csrfToken = authcookieValue.Reverse();
                             setcookies.Add("XSRF-TOKEN=" + csrfToken + ";path=/");
                             responseHeaders["Set-Cookie"] = setcookies.ToArray();
                         }
