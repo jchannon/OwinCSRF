@@ -90,7 +90,7 @@
                         {
                             var authcookieValue = authcookie.Split(new[] { '=' }, StringSplitOptions.RemoveEmptyEntries)[1].Split(new[] { ';' })[0];
                             //Make a secure token. This is not a good example
-                            var csrfToken = authcookieValue.Reverse();
+                            var csrfToken = new String(authcookieValue.Reverse().ToArray());
                             setcookies.Add("XSRF-TOKEN=" + csrfToken + ";path=/");
                             responseHeaders["Set-Cookie"] = setcookies.ToArray();
                         }
