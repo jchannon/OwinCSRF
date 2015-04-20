@@ -1,5 +1,6 @@
 ﻿namespace HeaderManip
 {
+    using AcspNet.Owin.Security.AesDataProtectorProvider;
     using Microsoft.Owin;
     using Microsoft.Owin.Hosting;
     using Microsoft.Owin.Security;
@@ -49,6 +50,8 @@
             });
 
             app.UseNancy();
+
+            app.UseAesDataProtectorProvider();
         }
     }
 

@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeaderManip", "HeaderManip\HeaderManip.csproj", "{7CB2C84E-D428-470B-AE30-4BE5E37E29F4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeaderManip.Tests", "HeaderManip.Tests\HeaderManip.Tests.csproj", "{B7F0F1FC-0157-4C2F-AB94-82F61623EBC6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{7CB2C84E-D428-470B-AE30-4BE5E37E29F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CB2C84E-D428-470B-AE30-4BE5E37E29F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7CB2C84E-D428-470B-AE30-4BE5E37E29F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7F0F1FC-0157-4C2F-AB94-82F61623EBC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7F0F1FC-0157-4C2F-AB94-82F61623EBC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7F0F1FC-0157-4C2F-AB94-82F61623EBC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7F0F1FC-0157-4C2F-AB94-82F61623EBC6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
