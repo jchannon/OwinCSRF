@@ -45,7 +45,7 @@
                 CookieHttpOnly = true,
                 CookieSecure = Microsoft.Owin.Security.Cookies.CookieSecureOption.SameAsRequest,
                 SlidingExpiration = true,
-                AuthenticationType = "VQCookie",
+                AuthenticationType = "MyCookie",
             });
 
             app.UseNancy();
