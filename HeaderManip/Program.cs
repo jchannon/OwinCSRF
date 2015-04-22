@@ -38,8 +38,6 @@
     {
         public void Configuration(IAppBuilder app)
         {
-            app.UseMyMiddleware();
-
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
                 AuthenticationMode = AuthenticationMode.Active,
@@ -48,6 +46,8 @@
                 SlidingExpiration = true,
                 AuthenticationType = "MyCookie",
             });
+            
+            app.UseMyMiddleware();
 
             app.UseNancy();
 
