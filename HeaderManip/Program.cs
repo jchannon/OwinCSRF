@@ -38,6 +38,7 @@
     {
         public void Configuration(IAppBuilder app)
         {
+            //If I put this here or after UseCookieAuthentication I always get 2 cookies in the response
             app.UseMyMiddleware();
 
             app.UseCookieAuthentication(new CookieAuthenticationOptions
